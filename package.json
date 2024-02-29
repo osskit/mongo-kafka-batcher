@@ -1,0 +1,39 @@
+{
+  "name": "batcher",
+  "private": true,
+  "version": "0.0.0",
+  "exports": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js | pino-pretty",
+    "start:dev": "tsc && nodemon",
+    "build": "tsc",
+    "format": "prettier --write '**/*.{ts,js,json,yaml,yml}'",
+    "lint:base": "eslint . --ext .ts",
+    "lint": "yarn lint:base --fix"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "env-var": "^7.4.1",
+    "kafkajs": "^2.2.4",
+    "lodash-es": "^4.17.21",
+    "mongodb": "6.1.0"
+  },
+  "devDependencies": {
+    "@osskit/eslint-config": "^1.0.24",
+    "@osskit/prettier-config": "^0.0.1",
+    "@osskit/tsconfig": "^0.0.7",
+    "@types/lodash-es": "^4.17.12",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "nodemon": "^3.1.0",
+    "pino-pretty": "^10.3.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  }
+}
