@@ -18,7 +18,6 @@ export const produce = async <T>(topic: string, documents: BatchDocument<T>[]) =
     topic,
     messages,
   });
-  console.log('aaaaaa', messages, topic);
   console.log(`produced ${messages.length} jobs`);
 };
 
